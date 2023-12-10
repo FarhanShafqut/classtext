@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from './(components)/Navbar';
+
 
 const App = () => {
   return (
@@ -8,7 +8,8 @@ const App = () => {
       <div className="font-sans">
    
         <main>
-          <Navbar/>
+       
+
           <section className="bg-gray-100">
             <div className="container mx-auto py-16">
               <div className="text-center mb-12">
