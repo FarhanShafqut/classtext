@@ -2,12 +2,15 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { CiHome } from "react-icons/ci";
+import { MdOutlineContactSupport } from "react-icons/md";
+import { MdReport } from "react-icons/md";
 
 // npm add react-icons
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch, AiFillHeart, AiOutlineUnorderedList, AiOutlineArrowDown } from 'react-icons/ai'
 import { BsCart4 } from 'react-icons/bs'
 import { GoPerson } from 'react-icons/go'
 import { HiOutlineBuildingStorefront } from "react-icons/hi2";
+import { FaSyringe } from "react-icons/fa";
 // import { IconName } from "react-icons/im";
 // import Darktheme from '../darkTheme/page'
 // import MobileNav from '../mobileNav/page'
@@ -31,29 +34,29 @@ export default function Navbar() {
         <div className='bg-slate-900 w-full ease-in duration-300 ' >
           <div className='max-w-[1440px]  m-auto flex justify-between items-center p-4  :'>
             <Link href="./">
-              <h1 className='font-semibold text-lg text-white dark:text-orange-400 ' ><Image src="/blacklogo.png" height={100} width={100}/></h1>
+              <h1 className=' flex m= font-semibold text-lg text-white dark:text-orange-400 ' ><FaSyringe size={30} className='dark:text-orange-400 mx-3' />H.E</h1>
             </Link>
             <div className='text-sm hover:text-slate-950 cursor-pointer  items-center hidden lg:flex '>
-              <input type="text" placeholder='Search your product' name='search' className='py-2 pr-60 px-2 rounded-s-sm  outline-none  ' />
+              <input type="text" placeholder='Find doctor Near you' name='search' className='py-2 pr-60 px-2 rounded-s-sm  outline-none  ' />
               <button>
                 <AiOutlineSearch size={36} className=' my-2 px-2 text-white bg-orange-400 rounded-e-sm' />
               </button>
             </div>
             <ul className='hidden lg:flex  text-white font-medium ' >
-              <li className='flex items-center justify-center mx-4' > <AiFillHeart size={30} className='dark:text-orange-400' />
-                <Link href='./wishlist' className='p-2  hover:text-slate-500 cursor-pointer'> Favouirite <br /> Wishlist</Link>
+              <li className='flex items-center justify-center mx-4  hover:text-red-600 ' > <AiFillHeart size={30} className='dark:text-orange-400' />
+                <Link href='./healthMedi' className='p-2 cursor-pointer'> Our Doctors </Link>
               </li>
               <li className='flex items-center justify-center mx-4 ' > <GoPerson size={30} className='dark:text-orange-400' />
                 <div className='flex flex-col'>
-                  <Link href='./Login' className='px-2 hover:text-slate-500 cursor-pointer'> Login</Link>
-                  <Link href='./Myaccount' className='px-2 hover:text-slate-500 cursor-pointer'> My Account</Link>
+                  <Link href='./Login' className='px-2  hover:text-red-600 cursor-pointer'> Login</Link>
+                  <Link href='./Myaccount' className='px-2  hover:text-red-600 cursor-pointer'> My Account</Link>
                 </div>
               </li>
-              <li className='flex items-center justify-center mx-4' > <BsCart4 size={30} className='dark:text-orange-400' />
-                <Link href='./yourProduct' className='px-2  hover:text-slate-500 cursor-pointer'> Your <br /> Products</Link>
+              <li className='flex items-center justify-center mx-4' > <MdOutlineContactSupport size={30} className='dark:text-orange-400' />
+                <Link href='./contact' className='px-2  hover:text-red-600 cursor-pointer'>Contact us</Link>
               </li>
-              <li className='flex items-center justify-center mx-4' > <BsCart4 size={30} className='text-orange-400' />
-                <Link href='./cart' className='px-2  hover:text-slate-500 cursor-pointer'> Your <br /> Cart</Link>
+              <li className='flex items-center hover:text-red- justify-center mx-4  hover:text-red-600 cursor-pointer' > <MdReport size={30} className='' />
+                <Link href='./cart' className='px-2 '> Your Report</Link>
               </li>
             </ul>
             <div>
@@ -75,7 +78,7 @@ export default function Navbar() {
                 {/* <DropDown /> */}
                 <li className='flex  justify-center mx-4' >
                 <CiHome size={30} className='dark:text-orange-400 mt-[3px]' />
-                  <Link href='./' className='px-2  mt-2  hover:text-slate-500 cursor-pointer'> HOME</Link>
+                  <Link href='./doctorPage' className='px-2  mt-2  hover:text-slate-500 cursor-pointer'> Your Appointment</Link>
                 </li>
                 <li className='flex  justify-center mx-4 ' >
                   <HiOutlineBuildingStorefront size={30} className='dark:text-orange-400 mt-[3px]' />

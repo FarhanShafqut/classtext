@@ -42,11 +42,11 @@ type Address {
 
 model Appointment {
   id               String @id @default(auto()) @map("_id") @db.ObjectId
-  fullName         String
+  name         String
   emailAddress     String
   phoneNumber      String
-  doctorsSpecialty String
-  preferredDate    DateTime
+  specality String
+
 }
 
 model Bills {
