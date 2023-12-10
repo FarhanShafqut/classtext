@@ -1,5 +1,5 @@
 import React from 'react';
-// import Bigcard from './(components)/bigcard';
+
 import Navbar from './(components)/Navbar';
 
 const App = () => {
@@ -9,7 +9,6 @@ const App = () => {
    
         <main>
           <Navbar/>
-            {/* <Bigcard/> */}
           <section className="bg-gray-100">
             <div className="container mx-auto py-16">
               <div className="text-center mb-12">
